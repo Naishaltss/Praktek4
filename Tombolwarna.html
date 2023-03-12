@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Double-click Event untuk Mengubah Warna Kotak dari Kuning ke Merah</title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			display: inline-block;
+		}
+
+		/* Style kotak awal */
+		.box1 {
+			background-color: yellow;
+		}
+
+		.box2 {
+			background-color: yellow;
+		}
+
+		.box3 {
+			background-color: yellow;
+		}
+
+		.box4 {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<h1>Double-click Event untuk Mengubah Warna Kotak dari Kuning ke Merah</h1>
+
+	<!-- Kotak yang akan diubah warna dengan double-click -->
+	<div class="box box1" ondblclick="changeColor(this)"></div>
+	<div class="box box2" ondblclick="changeColor(this)"></div>
+	<div class="box box3" ondblclick="changeColor(this)"></div>
+	<div class="box box4" ondblclick="changeColor(this)"></div>
+
+	<script>
+		function changeColor(element) {
+			// Jika warna saat ini adalah kuning, ubah ke merah
+			if (element.style.backgroundColor === 'yellow') {
+				element.style.backgroundColor = 'red';
+			}
+			// Jika warna saat ini adalah merah, ubah ke kuning
+			else {
+				element.style.backgroundColor = 'yellow';
+			}
+		}
+	</script>
+</body>
+</html>
